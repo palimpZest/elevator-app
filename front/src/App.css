@@ -7,6 +7,7 @@
   height: 50px;
   padding: 25px;
   color: white;
+  margin-bottom: 20px;
 }
 
 .App-title {
@@ -15,4 +16,101 @@
 
 .selected {
   color: red;
+}
+
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tg td {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px 5px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+}
+
+.tg th {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 10px 5px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+}
+
+.tg .tg-yw4l {
+  vertical-align: top
+}
+
+.floor-display {
+  background-color: yellow;
+  height: 22px;
+  width: 22px;
+  color: white;
+}
+
+.button-display {
+ background-color: greenyellow;
+  height: 22px;
+  width: 22px;
+  color: white;
+}
+
+.button-panel {
+  /* display: inline-block; */
+  display: flex;
+  flex-wrap: wrap;
+  height: 100px;
+  width: 200px;
+  color: white;
+  justify-content: space-around;
+}
+
+.button-indicators {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  color: white;
+  justify-content: space-around;
+}
+
+.up-down-indicator {
+  background-color: rgb(70, 70, 70);
+  margin-right: 30px;
+  height: 55px;
+  width: 55px;
+  color: white;
+}
+
+.open-closed-indicator {
+  background-color: rgb(42, 42, 42);
+  height: 55px;
+  width: 55px;
+  color: white;
+}
+
+.button-item {
+  background-color: whitesmoke;
+  height: 70px;
+  width: 70px;
+  margin: 2px;
+
+}
+
+.elevator-one-holder {
+  display: inline-block;
+  background-color: #ccc;
+  height: 600px;
+}
+
+.elevators {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
