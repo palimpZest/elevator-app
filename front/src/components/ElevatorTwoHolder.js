@@ -3,12 +3,10 @@ import Building from "./Building";
 
 class ElevatorTwoHolder extends Component {
   render() {
-    return (
-      <div>
-        <h3>Elevator Holder 2</h3>
+    return <div className="elevator-two-holder">
+        <h4>Building</h4>
         <Building />
-      </div>
-    );
+      </div>;
   }
 }
 

@@ -2,16 +2,21 @@
   text-align: center;
 }
 
+h4 {
+  margin: 5px;
+}
+
 .App-header {
   background-color: #222;
-  height: 50px;
-  padding: 25px;
+  height: 12px;
+  padding: 20px;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .App-title {
-  font-size: 1.5em;
+  margin: 0;
+  font-size: 20px;
 }
 
 .selected {
@@ -24,9 +29,7 @@
 }
 
 .tg td {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  padding: 10px 5px;
+  padding: 0 1px;
   border-style: solid;
   border-width: 1px;
   overflow: hidden;
@@ -36,8 +39,8 @@
 .tg th {
   font-family: Arial, sans-serif;
   font-size: 14px;
-  font-weight: normal;
-  padding: 10px 5px;
+  font-weight: bold;
+  padding: 5px 5px;
   border-style: solid;
   border-width: 1px;
   overflow: hidden;
@@ -45,13 +48,14 @@
 }
 
 .tg .tg-yw4l {
-  vertical-align: top
+  vertical-align: center;
 }
 
 .floor-display {
   background-color: yellow;
-  height: 22px;
-  width: 22px;
+  height: 40px;
+  width: 35px;
+  margin-left: 15px; 
   color: white;
 }
 
@@ -62,15 +66,15 @@
   color: white;
 }
 
-.button-panel {
-  /* display: inline-block; */
+/* .button-panel {
+  display: inline-block;
   display: flex;
   flex-wrap: wrap;
   height: 100px;
   width: 200px;
   color: white;
   justify-content: space-around;
-}
+} */
 
 .button-indicators {
   display: flex;
@@ -83,34 +87,49 @@
 .up-down-indicator {
   background-color: rgb(70, 70, 70);
   margin-right: 30px;
-  height: 55px;
-  width: 55px;
+  height: 50px;
+  width: 50px;
   color: white;
+  border-radius: 10px; 
 }
 
 .open-closed-indicator {
   background-color: rgb(42, 42, 42);
-  height: 55px;
-  width: 55px;
+  height: 50px;
+  width: 50px;
   color: white;
+  border-radius: 10px;
 }
 
 .button-item {
-  background-color: whitesmoke;
-  height: 70px;
-  width: 70px;
-  margin: 2px;
-
+  /* background-color: whitesmoke; */
+  height: 50px;
+  width: 50px;
+  margin: 1px;
+  border-radius: 50px;
+  /* color: black; */
 }
 
 .elevator-one-holder {
   display: inline-block;
   background-color: #ccc;
-  height: 600px;
+  height: 620px;
+  min-width: 155px;
+}
+
+.elevator-two-holder {
+  display: inline-block;
+  background-color: rgb(212, 212, 212);
+  height: 852px;
+  min-width: 155px;
 }
 
 .elevators {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.building-button {
+  background-color: green;
 }

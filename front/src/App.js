@@ -12,9 +12,8 @@ class App extends Component {
             <header>
               <NavLink exact to="/" activeClassName="selected">
                 Home
-              </NavLink>
-              <br/>
-              <NavLink to="/admin" activeClassName="selected">
+              </NavLink> | 
+              {" "} <NavLink to="/admin" activeClassName="selected">
                 Admin
               </NavLink>
             </header>
