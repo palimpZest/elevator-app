@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
-// import { Route, BrowserRouter, Switch, NavLink } from "react-router-dom";
-// import Home from "./components/Home";
-// import Admin from "./components/Admin";
+import { Route, BrowserRouter, Switch, NavLink } from "react-router-dom";
+import Home from "./components/Home";
+import Admin from "./components/Admin";
 import './App.css';
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Elevator App</h1>
-        </header>
-      </div>
-    );
+    return <BrowserRouter>
+        <nav>
+          <Switch>
+            <header>
+              <NavLink exact to="/" activeClassName="selected">
+                Home
+              </NavLink>
+              <br/>
+              <NavLink to="/admin" activeClassName="selected">
+                Admin
+              </NavLink>
+            </header>
+          </Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/admin" component={Admin} />
+        </nav>
+      </BrowserRouter>;
   }
 }
 
 export default App;
+
+
