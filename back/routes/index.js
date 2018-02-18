@@ -10,14 +10,14 @@ router
 router
   .route("/api")
   .get(function(req, res, next) {
-    res.send({floors});
+    res.send({results});
   });
 
 module.exports = router;
 
-const floors = {
+const results = {
   count: 15,
-  results: [
+  floors: [
     {
       floor_number: 9,
       floor_position: "no",
