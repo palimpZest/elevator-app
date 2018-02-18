@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import { Route, BrowserRouter, Switch, NavLink } from "react-router-dom";
+// import Home from "./components/Home";
+// import Admin from "./components/Admin";
 import './App.css';
 
 class App extends Component {
