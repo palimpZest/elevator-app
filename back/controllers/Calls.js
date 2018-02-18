@@ -4,7 +4,8 @@ const Calls = {
   create: (req, res, next) => {
     new Call({
       name: req.body.name || req.query.name,
-      floor: req.body.floor || req.query.floor
+      floor: req.body.floor || req.query.floor,
+      created_at: new Date()
     }).save(err => {
       if (err) {
         res.render(err);
@@ -16,7 +17,7 @@ const Calls = {
     });
   },
   read: (req, res, next) => {
-    Call.find({}, "name floor").exec((error, results) => {
+    Call.find({}, "name floor created_at").exec((error, results) => {
       if (results.length == 0) {
         res.send("There's been an error. No data.");
       } else {

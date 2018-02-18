@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
+const Calls = require("../controllers/Calls");
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router
+  .route("/")
+  .get(Calls.read)
+  .post(Calls.create);
 
 module.exports = router;
