@@ -4,7 +4,7 @@ import Button from "./Button";
 class ButtonPanel extends Component {
   render() {
     return <div>
-          <Button floor_number={this.props.floor_number} />
+        <Button floor_number={this.props.floor_number} />
       </div>;
   }
 }
