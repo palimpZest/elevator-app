@@ -1,3 +1,5 @@
+/* Global styles */
+
 .App {
   text-align: center;
 }
@@ -21,6 +23,55 @@ h4 {
 
 .selected {
   color: red;
+}
+
+.elevators {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Elevator Panel Styles */
+
+.elevator-one-holder {
+  display: inline-block;
+  background-color: #ccc;
+  height: 600px;
+  min-width: 155px;
+}
+
+.button-indicators {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  color: white;
+  justify-content: space-around;
+}
+
+.up-down-indicator {
+  background-color: rgb(70, 70, 70);
+  margin-right: 30px;
+  height: 50px;
+  width: 50px;
+  color: white;
+  border-radius: 10px; 
+}
+
+.open-closed-indicator {
+  background-color: rgb(42, 42, 42);
+  height: 50px;
+  width: 50px;
+  color: white;
+  border-radius: 10px;
+}
+
+/* Building Styles */
+
+.elevator-two-holder {
+  display: inline-block;
+  background-color: rgb(212, 212, 212);
+  height: 808px;
+  min-width: 155px;
 }
 
 .tg {
@@ -55,81 +106,13 @@ h4 {
   background-color: yellow;
   height: 40px;
   width: 35px;
-  margin-left: 15px; 
+  margin-left: 15px;
   color: white;
-}
-
-.button-display {
- background-color: greenyellow;
-  height: 22px;
-  width: 22px;
-  color: white;
-}
-
-/* .button-panel {
-  display: inline-block;
-  display: flex;
-  flex-wrap: wrap;
-  height: 100px;
-  width: 200px;
-  color: white;
-  justify-content: space-around;
-} */
-
-.button-indicators {
-  display: flex;
-  height: 50px;
-  width: 100%;
-  color: white;
-  justify-content: space-around;
-}
-
-.up-down-indicator {
-  background-color: rgb(70, 70, 70);
-  margin-right: 30px;
-  height: 50px;
-  width: 50px;
-  color: white;
-  border-radius: 10px; 
-}
-
-.open-closed-indicator {
-  background-color: rgb(42, 42, 42);
-  height: 50px;
-  width: 50px;
-  color: white;
-  border-radius: 10px;
 }
 
 .button-item {
-  /* background-color: whitesmoke; */
-  height: 50px;
-  width: 50px;
-  margin: 1px;
+  height: 45px;
+  width: 45px;
+  margin: 2px;
   border-radius: 50px;
-  /* color: black; */
-}
-
-.elevator-one-holder {
-  display: inline-block;
-  background-color: #ccc;
-  height: 620px;
-  min-width: 155px;
-}
-
-.elevator-two-holder {
-  display: inline-block;
-  background-color: rgb(212, 212, 212);
-  height: 852px;
-  min-width: 155px;
-}
-
-.elevators {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.building-button {
-  background-color: green;
 }
