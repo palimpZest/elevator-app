@@ -15,9 +15,7 @@ router
 
 module.exports = router;
 
-const results = {
-  count: 15,
-  floors: [
+const results = [
     {
       floor_number: 9,
       floor_position: "no",
@@ -123,5 +121,4 @@ const results = {
       vertical_status: "immobile",
       call_activation: "possible"
     }
-  ]
-};
+];

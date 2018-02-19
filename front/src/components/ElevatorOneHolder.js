@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import ButtonIndicators from "./ButtonIndicators";
 import ButtonPanel from "./ButtonPanel";
-import axios from "axios";
+
+import { getFloorsAsync, addCall } from "../actions/calls";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
 class ElevatorOneHolder extends Component {
   constructor(props) {
@@ -25,29 +28,14 @@ class ElevatorOneHolder extends Component {
   }
 
   componentDidMount() {
-    axios
-      .get("http://localhost:3000/api")
-      .then(response => {
-        this.setState({
-          items: response.data.results.floors
-        });
-        console.log(response);
-        console.log(response.data.results.floors);
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+    this.props.getFloorsAsync();
   }
 
   render() {
-    return (
-      <div className="elevator-one-holder">
+    return <div className="elevator-one-holder">
         <h4>Elevator Panel</h4>
-        <ButtonIndicators
-          motion_status={this.state.motion_status}
-          door_status={this.state.door_status}
-        />
-        {this.state.items
+        <ButtonIndicators motion_status={this.state.motion_status} door_status={this.state.door_status} />
+        {this.props.floors.floors
           .slice(0, 10)
           .map((item, index) => (
             <ButtonPanel
@@ -59,9 +47,10 @@ class ElevatorOneHolder extends Component {
               call_activation={item.call_activation}
             />
           ))}
-      </div>
-    );
+      </div>;
   }
 }
 
-export default ElevatorOneHolder;
+export default connect(
+  state => state, dispatch => bindActionCreators({ addCall, getFloorsAsync }, dispatch) 
+)(ElevatorOneHolder);

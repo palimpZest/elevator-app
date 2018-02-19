@@ -1,28 +1,13 @@
 import React, { Component } from "react";
-import axios from "axios";
 import Button from "./Button";
 
-class Building extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: []
-    };
-  }
+import { getFloorsAsync, addCall } from "../actions/calls";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
+class Building extends Component {
   componentDidMount() {
-    axios
-      .get("http://localhost:3000/api")
-      .then(response => {
-        this.setState({
-          items: response.data.results.floors
-        });
-        console.log(response);
-        console.log(response.data.results.floors);
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+    this.props.getFloorsAsync();
   }
   render() {
     return <div>
@@ -32,7 +17,7 @@ class Building extends Component {
             <th className="tg-yw4l">Elevator</th>
             <th className="tg-yw4l">Button</th>
           </tr>
-          {this.state.items.map((item, index) => (
+          {this.props.floors.floors.map((item, index) => (
             <tr
               key={index}
               floor_position={item.floor_position}
@@ -47,7 +32,7 @@ class Building extends Component {
                 <div className="floor-display" />
               </td>
               <td>
-                <Button/>
+                <Button />
               </td>
             </tr>
           ))}
@@ -56,4 +41,6 @@ class Building extends Component {
   }
 }
 
-export default Building;
+export default connect(
+  state => state, dispatch => bindActionCreators({ addCall, getFloorsAsync }, dispatch) 
+)(Building);

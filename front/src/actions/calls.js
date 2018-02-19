@@ -19,7 +19,7 @@ export function addCall(push) {
       .post(API_URL, { calls: push })
       .then(function(response) {
         console.log(response);
-        dispatch(addCallSuccess(response.data));
+        dispatch(addCallSuccess(response.data.results));
       })
       .catch(function(error) {
         console.log(error);
@@ -40,7 +40,7 @@ export function getCallsAsync() {
       .get(API_URL)
       .then(function(response) {
         console.log(response);
-        dispatch(getAllCallsSuccess(response.data));
+        dispatch(getAllCallsSuccess(response.data.results));
       })
       .catch(function(error) {
         console.log(error);
@@ -61,7 +61,7 @@ export function getFloorsAsync() {
       .get(API_URL)
       .then(function(response) {
         console.log(response);
-        dispatch(getAllFloorsSuccess(response.data));
+        dispatch(getAllFloorsSuccess(response.data.results));
       })
       .catch(function(error) {
         console.log(error);
