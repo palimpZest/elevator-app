@@ -1,0 +1,118 @@
+/* Global styles */
+
+.App {
+  text-align: center;
+}
+
+h4 {
+  margin: 5px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 12px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.App-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.selected {
+  color: red;
+}
+
+.elevators {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Elevator Panel Styles */
+
+.elevator-one-holder {
+  display: inline-block;
+  background-color: #ccc;
+  height: 600px;
+  min-width: 155px;
+}
+
+.button-indicators {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  color: white;
+  justify-content: space-around;
+}
+
+.up-down-indicator {
+  background-color: rgb(70, 70, 70);
+  margin-right: 30px;
+  height: 50px;
+  width: 50px;
+  color: white;
+  border-radius: 10px; 
+}
+
+.open-closed-indicator {
+  background-color: rgb(42, 42, 42);
+  height: 50px;
+  width: 50px;
+  color: white;
+  border-radius: 10px;
+}
+
+/* Building Styles */
+
+.elevator-two-holder {
+  display: inline-block;
+  background-color: rgb(212, 212, 212);
+  height: 808px;
+  min-width: 155px;
+}
+
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tg td {
+  padding: 0 1px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+}
+
+.tg th {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 5px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+}
+
+.tg .tg-yw4l {
+  vertical-align: center;
+}
+
+.floor-display {
+  background-color: yellow;
+  height: 40px;
+  width: 35px;
+  margin-left: 15px;
+  color: white;
+}
+
+.button-item {
+  height: 45px;
+  width: 45px;
+  margin: 2px;
+  border-radius: 50px;
+}
