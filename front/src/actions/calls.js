@@ -19,7 +19,7 @@ export function addCall(push) {
       .post(API_URL, { calls: push })
       .then(function(response) {
         console.log(response);
-        dispatch(addPostSuccess(response.data));
+        dispatch(addCallSuccess(response.data));
       })
       .catch(function(error) {
         console.log(error);

@@ -1,7 +1,6 @@
 import {
   ADD_CALL_SUCCESS,
-  GET_ALL_CALLS_SUCCESS,
-  GET_ALL_FLOORS_SUCCESS
+  GET_ALL_CALLS_SUCCESS
 } from "../actions/calls";
 
 export function calls(state = { calls: [] }, action) {
@@ -10,15 +9,6 @@ export function calls(state = { calls: [] }, action) {
       return { ...state, calls: action.push };
     case ADD_CALL_SUCCESS:
       return { ...state, posts: state.calls.concat(action.push) };
-    default:
-      return state;
-  }
-}
-
-export function floors(state = { floors: [] }, action) {
-  switch (action.type) {
-    case GET_ALL_FLOORS_SUCCESS:
-      return { ...state, floors: action.floor };
     default:
       return state;
   }
