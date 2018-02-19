@@ -4,7 +4,7 @@ class ButtonIndicators extends Component {
   render() {
     return <div>
         <div className="button-indicators">
-          <div className="up-down-indicator">{this.props.motion}</div>
+          <div className="up-down-indicator">{this.props.motion_status}</div>
           <div className="open-closed-indicator">{this.props.door_status}</div>
         </div>
       </div>;

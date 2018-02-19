@@ -8,8 +8,19 @@ class ElevatorOneHolder extends Component {
     super(props);
     this.state = {
       items: [],
-      motion : "default",
-      door_status : "closed"
+      motion_status: "default",
+      door_status: "closed"
+    };
+
+    this.motion_status = {
+      default: { message: "", color: "black" },
+      up: { message: "Up", color: "green" },
+      down: { message: "Down", color: "orange" }
+    };
+
+    this.door_status = {
+      closed: "closed",
+      open: "open"
     };
   }
 
@@ -29,9 +40,13 @@ class ElevatorOneHolder extends Component {
   }
 
   render() {
-    return <div className="elevator-one-holder">
+    return (
+      <div className="elevator-one-holder">
         <h4>Elevator Panel</h4>
-        <ButtonIndicators motion={this.state.motion} door_status={this.state.door_status} />
+        <ButtonIndicators
+          motion_status={this.state.motion_status}
+          door_status={this.state.door_status}
+        />
         {this.state.items
           .slice(0, 10)
           .map((item, index) => (
@@ -44,7 +59,8 @@ class ElevatorOneHolder extends Component {
               call_activation={item.call_activation}
             />
           ))}
-      </div>;
+      </div>
+    );
   }
 }
 
