@@ -1,6 +1,4 @@
-import {
-  GET_ALL_FLOORS_SUCCESS
-} from "../actions/calls";
+import { GET_ALL_FLOORS_SUCCESS } from '../actions/calls';
 
 export function floors(state = { floors: [] }, action) {
   switch (action.type) {

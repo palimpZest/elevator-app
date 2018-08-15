@@ -1,4 +1,3 @@
 module.exports = {
-  mongodb:
-    "mongodb://<user>:<password>@<mlab-id>/<database-name>"
+  mongodb: 'mongodb://<user>:<password>@<mlab-id>/<database-name>'
 };

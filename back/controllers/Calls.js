@@ -1,4 +1,4 @@
-const Call = require("../models/Call");
+const Call = require('../models/Call');
 
 const Calls = {
   create: (req, res, next) => {
@@ -11,13 +11,13 @@ const Calls = {
         res.render(err);
       } else {
         console.log(req.body);
-        console.log("Elevator called");
-        res.send("New elevator call !");
+        console.log('Elevator called');
+        res.send('New elevator call !');
       }
     });
   },
   read: (req, res, next) => {
-    Call.find({}, "name floor created_at").exec((error, results) => {
+    Call.find({}, 'name floor created_at').exec((error, results) => {
       if (results.length == 0) {
         res.send("There's been an error. No data.");
       } else {

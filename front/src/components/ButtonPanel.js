@@ -1,11 +1,13 @@
-import React, { Component } from "react";
-import Button from "./Button";
+import React, { Component } from 'react';
+import Button from './Button';
 
 class ButtonPanel extends Component {
   render() {
-    return <div>
+    return (
+      <div>
         <Button floor_number={this.props.floor_number} />
-      </div>;
+      </div>
+    );
   }
 }
 

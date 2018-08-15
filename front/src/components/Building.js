@@ -1,16 +1,17 @@
-import React, { Component } from "react";
-import Button from "./Button";
+import React, { Component } from 'react';
+import Button from './Button';
 
-import { getFloorsAsync, addCall } from "../actions/calls";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+import { getFloorsAsync, addCall } from '../actions/calls';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 class Building extends Component {
   componentDidMount() {
     this.props.getFloorsAsync();
   }
   render() {
-    return <div>
+    return (
+      <div>
         <table className="tg">
           <thead>
             <tr>
@@ -29,7 +30,7 @@ class Building extends Component {
                 call_activation={item.call_activation}
               >
                 <td className="tg-yw4l" floor_number={item.floor_number}>
-                  {item.floor_number}{" "}
+                  {item.floor_number}{' '}
                 </td>
                 <td className="tg-yw4l">
                   <div className="floor-display" />
@@ -41,10 +42,12 @@ class Building extends Component {
             ))}
           </tbody>
         </table>
-      </div>;
+      </div>
+    );
   }
 }
 
 export default connect(
-  state => state, dispatch => bindActionCreators({ addCall, getFloorsAsync }, dispatch) 
+  state => state,
+  dispatch => bindActionCreators({ addCall, getFloorsAsync }, dispatch)
 )(Building);
