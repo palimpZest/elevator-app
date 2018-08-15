@@ -61,7 +61,7 @@ export function getFloorsAsync() {
       .get(API_URL)
       .then(function(response) {
         console.log(response);
-        dispatch(getAllFloorsSuccess(response.data.results));
+        dispatch(getAllFloorsSuccess(response.data));
       })
       .catch(function(error) {
         console.log(error);
