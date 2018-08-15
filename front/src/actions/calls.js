@@ -1,10 +1,10 @@
-import axios from "axios";
+import axios from 'axios';
 
-export const ADD_CALL_SUCCESS = "ADD_CALL_SUCCESS";
-export const GET_ALL_CALLS_SUCCESS = "GET_ALL_CALLS_SUCCESS";
-export const GET_ALL_FLOORS_SUCCESS = "GET_ALL_FLOORS_SUCCESS";
+export const ADD_CALL_SUCCESS = 'ADD_CALL_SUCCESS';
+export const GET_ALL_CALLS_SUCCESS = 'GET_ALL_CALLS_SUCCESS';
+export const GET_ALL_FLOORS_SUCCESS = 'GET_ALL_FLOORS_SUCCESS';
 
-const API_URL = "http://localhost:3000/api";
+const API_URL = 'http://localhost:3000/api';
 
 function addCallSuccess(push) {
   return {

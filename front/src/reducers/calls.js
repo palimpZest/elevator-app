@@ -1,7 +1,4 @@
-import {
-  ADD_CALL_SUCCESS,
-  GET_ALL_CALLS_SUCCESS
-} from "../actions/calls";
+import { ADD_CALL_SUCCESS, GET_ALL_CALLS_SUCCESS } from '../actions/calls';
 
 export function calls(state = { calls: [] }, action) {
   switch (action.type) {

@@ -1,7 +1,10 @@
-const config = require("../config.js");
-const mongoose = require("mongoose");
+const config = require('../config.js');
+const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect(config.mongodb, {});
+mongoose.connect(
+  config.mongodb,
+  {}
+);
 const Schema = mongoose.Schema;
 
 const Call = new Schema({
@@ -10,4 +13,4 @@ const Call = new Schema({
   created_at: { type: Date, required: true, default: Date.now }
 });
 
-module.exports = mongoose.model("Call", Call);
+module.exports = mongoose.model('Call', Call);
