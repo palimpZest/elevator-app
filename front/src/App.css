@@ -102,7 +102,15 @@ h4 {
   vertical-align: center;
 }
 
-.floor-display {
+.floor-closed-display {
+  background-color: inherit;
+  height: 40px;
+  width: 35px;
+  margin-left: 15px;
+  color: white;
+}
+
+.floor-open-display {
   background-color: yellow;
   height: 40px;
   width: 35px;
@@ -115,4 +123,18 @@ h4 {
   width: 45px;
   margin: 2px;
   border-radius: 50px;
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button-active {
+  background-color: yellow;
+  border-color: #ffff00;
+}
+
+.button-inactive {
+  background-color: inherit;
 }
