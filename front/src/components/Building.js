@@ -33,10 +33,17 @@ class Building extends Component {
                   {item.floor_number}{' '}
                 </td>
                 <td className="tg-yw4l">
-                  <div className="floor-display" />
+                  {item.door_status === 'closed' ? (
+                    <div className="floor-closed-display" />
+                  ) : (
+                    <div className="floor-open-display" />
+                  )}
                 </td>
                 <td>
-                  <Button floor_number={item.floor_number} />
+                  <Button
+                    door_status={item.door_status}
+                    floor_number={item.floor_number}
+                  />
                 </td>
               </tr>
             ))}

@@ -4,7 +4,15 @@ class Button extends Component {
   render() {
     return (
       <div>
-        <button className="button-item">{this.props.floor_number}</button>
+        {this.props.door_status === 'closed' ? (
+          <button className="button-item button-inactive">
+            {this.props.floor_number}
+          </button>
+        ) : (
+          <button className="button-item button-active">
+            {this.props.floor_number}
+          </button>
+        )}
       </div>
     );
   }

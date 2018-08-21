@@ -5,7 +5,10 @@ class ButtonPanel extends Component {
   render() {
     return (
       <div>
-        <Button floor_number={this.props.floor_number} />
+        <Button
+          door_status={this.props.door_status}
+          floor_number={this.props.floor_number}
+        />
       </div>
     );
   }
